@@ -7,7 +7,7 @@
   <script>
   function validateAge() 
   {
-    var x = document.forms["myForm"]["age"].value;
+    var x = document.getElementByName("age").value;
     x = parseInt(x);
     if (x < 7) 
     {
@@ -27,7 +27,10 @@
 <body dir="rtl">
   <h2><br>בכדי להשתתף בניסוי, יש להקפיד על שינה של לפחות 7 שעות בלילה הקודם למפגש.</h2>
   <!--<form name="myForm" action="action_file.php" onsubmit="return validateAge()" method="post">-->
-    <strong> מספר השעות אשר ישנת בלילה האחרון:</strong> <br><br> <input type="text" name="age"> <br><br>
+    <strong> מספר השעות אשר ישנת בלילה האחרון:</strong> 
+    <br><br> 
+    <input type="text" name="age"> 
+    <br><br>
     <input type="button" value="אישור" onclick="validateAge()">
   <!--</form>-->
 </body>
