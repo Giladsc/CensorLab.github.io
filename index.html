@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
-<body>
-<script>
-function validateAge() 
-{
-  var x = document.forms["myForm"]["age"].value;
-  x = parseInt(x);
-  if (x < 7) 
-  {
-    alert("לא ניתן להמשיך בניסוי.");
-  } 
-  else 
-  {
-      const urlParams = new URLSearchParams(window.location.search);
-      //window.location.href = "https://run.pavlovia.org/CensorLab/" + urlParams.get("experiment") + "/html";
-    window.location.href = "https://www.google.com";
-      
-  }
-}
-</script>
-</head>
-<body dir="rtl">
-<h2><br>בכדי להשתתף בניסוי, יש להקפיד על שינה של לפחות 7 שעות בלילה הקודם למפגש.</h2>
-<form name="myForm" onsubmit="validateAge()" method="post">
-  <strong> מספר השעות אשר ישנת בלילה האחרון:</strong> <br><br> <input type="text" name="age"> <br><br>
-  <input type="submit" value="אישור">
-</form>
+  
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
 
+  <script>
+  function validateAge() 
+  {
+    var x = document.forms["myForm"]["age"].value;
+    x = parseInt(x);
+    if (x < 7) 
+    {
+      alert("לא ניתן להמשיך בניסוי.");
+    } 
+    else 
+    {
+        const urlParams = new URLSearchParams(window.location.search);
+        //window.location.href = "https://run.pavlovia.org/CensorLab/" + urlParams.get("experiment") + "/html";
+      window.location.href = "https://www.google.com";
+
+    }
+  }
+  </script>
+</head>
+  
+<body dir="rtl">
+  <h2><br>בכדי להשתתף בניסוי, יש להקפיד על שינה של לפחות 7 שעות בלילה הקודם למפגש.</h2>
+  <form name="myForm" onsubmit="validateAge()" method="post">
+    <strong> מספר השעות אשר ישנת בלילה האחרון:</strong> <br><br> <input type="text" name="age"> <br><br>
+    <input type="submit" value="אישור">
+  </form>
 </body>
+  
 </html>
